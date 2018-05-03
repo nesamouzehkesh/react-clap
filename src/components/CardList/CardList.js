@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
+import CardShow from '../CardShow/CardShow';
 
-const CardList = ({ data }) => {
-    console.log(data);
-    return (
+const CardList = ({ data }) =>
+    (
         <ul>
-            {data.map(article => (<li key={article.id}>{article.name}</li>))}
+            {data.map(article => (<CardShow key={article.id} show={article} />))}
         </ul>
     )
-}
+
 export default CardList;
