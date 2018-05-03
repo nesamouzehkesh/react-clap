@@ -1,0 +1,31 @@
+.Card {
+    display: inline-block;
+    color: #fff;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 10px;
+    text-align: center;
+    width: 233px;
+    height: auto;
+    margin: 1em;
+    background: #ee0979;
+    background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);
+    background: linear-gradient(to right, #ff6a00, #ee0979);
+    transition: all .4 ease;
+}
+
+.Card:hover {
+    transform: scale(1.1);
+}
+
+.author-image {
+    border-radius: 100%;
+    margin: 13px;
+}
+
+.author-medium {
+    color: #fff;
+    font-size: 14px;
+    display: block;
+    padding: 1em;
+}

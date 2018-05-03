@@ -25,6 +25,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 3.5em;
     padding: .8em .5em 1px;
     color: #fff;
+    margin-bottom: 10px;
 }
 
 a {
