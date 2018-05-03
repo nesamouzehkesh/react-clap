@@ -1,0 +1,40 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    font-family: Rboto, sans-serif;
+}
+
+.App {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;  
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: lighter;
+}
+
+.title {
+    font-weight: normal;
+    font-size: 3.5em;
+    padding: .8em .5em 1px;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media(max-width: 1100px) {
+    .title { font-size: 2.8em; }
+    .App { width: 90%; }
+}
+
+@media(max-width: 900px) {
+    .App { width: 100%; }
+}
