@@ -11,7 +11,7 @@
     background: #ee0979;
     background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);
     background: linear-gradient(to right, #ff6a00, #ee0979);
-    transition: all .4 ease;
+    transition: all .4s ease;
 }
 
 .Card:hover {
@@ -28,4 +28,20 @@
     font-size: 14px;
     display: block;
     padding: 1em;
+}
+
+@media(max-width: 810px) {
+    .Card { margin: 3.5em 3.5em 2em; }
+}
+
+@media(max-width: 650px) {
+    .Card { margin: 1.5em; }
+}
+
+@media(max-width: 570px) {
+    .Card { margin: .5em;}
+}
+
+@media(max-width: 500px) {
+    .Card { margin: 1.5em;}
 }
