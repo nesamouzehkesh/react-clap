@@ -1,17 +1,19 @@
 .Card {
     display: inline-block;
-    color: #fff;
+    color:rgb(5, 37, 126);
     border-top-left-radius: 30px;
     border-bottom-right-radius: 30px;
     border-bottom-left-radius: 10px;
+    border-color: #2608ce;
     text-align: center;
     width: 233px;
     height: auto;
     margin: 1em;
     background: #ee0979;
-    background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);
-    background: linear-gradient(to right, #ff6a00, #ee0979);
+    background: -webkit-linear-gradient(to right, rgb(224, 177, 22),rgb(235, 220, 170));
+    background: linear-gradient(to right, rgb(224, 177, 22),rgb(235, 220, 170));
     transition: all .4s ease;
+    padding: .5em;
 }
 
 .Card:hover {
@@ -19,8 +21,10 @@
 }
 
 .author-image {
-    border-radius: 100%;
+    border-radius: 30%;
     margin: 13px;
+    border: 2px solid rgb(214, 177, 174);
+
 }
 
 .author-medium {

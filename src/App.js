@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import data from './components/data';
 import CardList from './components/CardList/CardList';
+import Header from './components/Header/Header';
 
 class App extends Component {
     constructor(props) {
@@ -21,7 +22,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <h1 className="title">Article Search...</h1>
+                <Header title="Article Search" />
                 <CardList data={this.state.data} />
             </div>
         )
