@@ -1,8 +1,41 @@
 
-.title {
-    font-weight: normal;
-    font-size: 2em;
-    padding: .8em .5em 1px;
-    color: #fff;
-    margin-bottom: 50px;
+
+.header-container {
+    display: inline-flex;
+    margin: 20px;
+}
+
+.search-input {
+    text-align: center;
+    border: 5px solid #F7F7F7;
+    position: relative;
+    left: 20px;
+    top: 50px;
+    max-height: 50px;
+    z-index: 2;
+    border-radius: 5px;
+    font-size: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.19);
+    transition: .5s border-color ease;
+}
+
+.fi-paw {
+    justify-content: center;
+    align-content: center;
+    font-size: 50px;
+    margin-top: 10px;
+    transition: 0.2s ease;
+}
+.fi-paw > p {
+    font-size: 20px;
+}
+
+
+.header-container:hover .fi-paw{
+    cursor: pointer;
+    color: rgb(224, 177, 22);
+}
+
+.header-container:hover .search-input{
+    border-color: rgb(224, 177, 22);
 }

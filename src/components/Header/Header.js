@@ -1,11 +1,13 @@
 import React from 'react';
 import './Header.css';
-import Logo from '../Logo/Logo';
+import '../../icons.css';
 
 const Header = ({ title }) => (
-    <div className="title">
-        <Logo />
-        {title}
+    <div className="header-container">
+        <div className="fi-paw">
+            <p>{title}</p>
+        </div>
+        <input className="search-input" />
     </div>
 )
 

@@ -22,7 +22,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <Header title="Article Search" />
+                <Header title="Article Search:" />
                 <CardList data={this.state.data} />
             </div>
         )
