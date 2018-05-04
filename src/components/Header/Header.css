@@ -1,7 +1,7 @@
 
 
 .header-container {
-    display: inline-flex;
+    display: flex;
     margin: 20px;
 }
 
@@ -20,22 +20,28 @@
 }
 
 .fi-paw {
-    justify-content: center;
-    align-content: center;
     font-size: 50px;
     margin-top: 10px;
-    transition: 0.2s ease;
+    color: rgb(224, 177, 22);
 }
 .fi-paw > p {
     font-size: 20px;
 }
 
-
-.header-container:hover .fi-paw{
-    cursor: pointer;
-    color: rgb(224, 177, 22);
+.fi-plus {
+    font-size: 25px;
+    margin-top: 25px;
+    transition: 0.2s ease;
+    margin-left: auto;
+    margin-right: 30px;
+    transition: .5s ease;
 }
 
-.header-container:hover .search-input{
+.fi-plus:hover {
+    color: rgb(224, 177, 22);
+    cursor: pointer;
+}
+
+.search-input:hover{
     border-color: rgb(224, 177, 22);
 }
