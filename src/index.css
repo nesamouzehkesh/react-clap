@@ -1,3 +1,5 @@
+
+
 * {
     padding: 0;
     margin: 0;
@@ -5,9 +7,9 @@
 }
 
 body {
-    background-color: rgb(5, 37, 126);
+    background-color:rgb(12, 108, 117);
     font-family: Rboto, sans-serif;
-    color: #fff;
+    color:  rgb(224, 177, 22);
 }
 
 .App {
