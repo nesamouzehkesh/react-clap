@@ -6,11 +6,17 @@ import Header from './components/Header/Header';
 class App extends Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+            data: [],
+            term: ''
+        }
     }
 
-    state = {
-        data: [],
-        term: ''
+    changeHandler = (searchTerm) => {
+        this.setState({
+            term: searchTerm
+        })
     }
 
     componentDidMount() {
@@ -22,7 +28,13 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <Header title="Collection Search:" add="Add" />
+                <Header
+                    title="Collection Search:"
+                    add="Add"
+                    term={this.state.term}
+                    data={this.state.data}
+                    changeHandler={this.changeHandler}
+                />
                 <CardList data={this.state.data} />
             </div>
         )
