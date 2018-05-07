@@ -9,14 +9,23 @@ class App extends Component {
 
         this.state = {
             data: [],
-            term: ''
+            term: '',
+            showArticle: false
         }
     }
+
 
     changeHandler = (searchTerm) => {
         this.setState({
             term: searchTerm
         });
+    }
+
+    findArticle = (articleId) => {
+        this.setState({
+            showArticle: true
+        })
+        const theArticle = data.filter(article => article.id == articleId);
     }
 
     componentDidMount() {
@@ -26,18 +35,32 @@ class App extends Component {
     }
 
     render() {
-        console.log(data);
-        return (
-            <div className="App">
-                <Header
-                    title="Collection Search:"
-                    add="Add"
-                    data={this.state.data}
-                    changeHandler={this.changeHandler}
-                />
-                <CardList data={this.state.data} term={this.state.term} />
-            </div>
-        )
+
+        if (!this.state.showArticle) {
+            return (
+                <div className="App">
+                    <Header
+                        title="Collection Search:"
+                        add="Add"
+                        data={this.state.data}
+                        changeHandler={this.changeHandler}
+                    />
+                    <CardList data={this.state.data} term={this.state.term} findArticle={this.findArticle} />
+                </div>
+            )
+        } else {
+            return (
+                <div className="App">
+                    <Header
+                        title="Collection Search:"
+                        add="Add"
+                        data={this.state.data}
+                        changeHandler={this.changeHandler}
+                    />
+                    <div>article details</div>
+                </div>
+            )
+        }
     }
 
 }

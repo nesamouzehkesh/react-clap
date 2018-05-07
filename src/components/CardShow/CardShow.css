@@ -35,6 +35,18 @@ color:#73c2ca;
     text-align: center;
 }
 
+.Card a {
+    color:#73c2ca;
+    text-decoration: none;
+    transition: .5s ease;
+}
+
+.Card h3 a:hover {
+    color:  rgb(224, 177, 22);
+    cursor: pointer;
+    text-decoration: none;
+}
+
 .author-image {
     border-radius: 30%;
     margin: 13px;
