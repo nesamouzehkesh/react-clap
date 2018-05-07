@@ -1,5 +1,5 @@
 export default [
-  { name: 'Async Await', id: '1', image: './assets/img/async.jpg', url: 'https://open.spotify.com/artist/1QOmebWGB6FdFtW7Bo3F0W' },
+  { name: 'Async Await', id: '1', image: './assets/img/async.png', image2x: './assets/img/async@2x.jpg', url: 'https://open.spotify.com/artist/1QOmebWGB6FdFtW7Bo3F0W' },
   { name: 'CSS', id: '2', image: './assets/img/css.png', url: 'https://open.spotify.com/artist/1MuQ2m2tg7naeRGAOxYZer' },
   { name: 'ES6', id: '3', image: './assets/img/es6.png', url: 'https://open.spotify.com/artist/53XhwfbYqKCa1cC15pYq2q' },
   { name: 'Functional Programming', id: '4', image: './assets/img/functional.png', url: 'https://open.spotify.com/artist/0k17h0D3J5VfsdmQ1iZtE9' },

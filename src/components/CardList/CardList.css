@@ -1,5 +1,8 @@
 .articles {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
+    align-content: flex-start;
+    -webkit-align-content: flex-start; /* Safari */
+
 }
