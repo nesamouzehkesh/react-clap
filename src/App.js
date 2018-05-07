@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import data from './components/data';
 import CardList from './components/CardList/CardList';
 import Header from './components/Header/Header';
+import CardDetails from './components/CardDetails/CardDetails';
 
 class App extends Component {
     constructor(props) {
@@ -10,7 +11,8 @@ class App extends Component {
         this.state = {
             data: [],
             term: '',
-            showArticle: false
+            showArticle: false,
+            currentArticle: ''
         }
     }
 
@@ -21,11 +23,12 @@ class App extends Component {
         });
     }
 
-    findArticle = (articleId) => {
+    renderArticle = (articleId) => {
+        const theArticle = data.filter(article => article.id === articleId);
         this.setState({
-            showArticle: true
+            showArticle: true,
+            currentArticle: theArticle
         })
-        const theArticle = data.filter(article => article.id == articleId);
     }
 
     componentDidMount() {
@@ -36,6 +39,7 @@ class App extends Component {
 
     render() {
 
+
         if (!this.state.showArticle) {
             return (
                 <div className="App">
@@ -45,10 +49,11 @@ class App extends Component {
                         data={this.state.data}
                         changeHandler={this.changeHandler}
                     />
-                    <CardList data={this.state.data} term={this.state.term} findArticle={this.findArticle} />
+                    <CardList data={this.state.data} term={this.state.term} renderArticle={this.renderArticle} />
                 </div>
             )
         } else {
+            console.log(this.state.currentArticle);
             return (
                 <div className="App">
                     <Header
@@ -57,7 +62,7 @@ class App extends Component {
                         data={this.state.data}
                         changeHandler={this.changeHandler}
                     />
-                    <div>article details</div>
+                    <CardDetails currentArticle={this.state.currentArticle} />
                 </div>
             )
         }

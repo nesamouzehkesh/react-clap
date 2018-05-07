@@ -1,13 +1,13 @@
 import React from 'react';
 import './CardShow.css';
 
-const CardShow = ({ article, findArticle }) => {
+const CardShow = ({ article, renderArticle }) => {
     console.log(article.img);
 
     return (
         <li className="Card">
             <img src={article.image} alt="" className="author-image" />
-            <h3><a onClick={() => findArticle(article.id)}>{article.name}</a></h3>
+            <h3><a onClick={() => renderArticle(article.id)}>{article.name}</a></h3>
         </li>
     )
 }
