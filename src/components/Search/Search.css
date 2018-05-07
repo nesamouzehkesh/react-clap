@@ -4,13 +4,13 @@
     border: 5px solid rgba(20, 158, 147, 0.4);
     position: relative;
     left: 20px;
-    top: 50px;
-    max-height: 50px;
+    top: 20px;
     z-index: 2;
     border-radius: 5px;
     font-size: 20px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.19);
     transition: .5s border-color ease;
+    align-self: center;
 }
 
 
