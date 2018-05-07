@@ -1,7 +1,7 @@
 import React from 'react';
 
 const CardDetails = ({ currentArticle }) => (
-    <div>{currentArticle.name}</div>
+    <div>{currentArticle}</div>
 )
 
 export default CardDetails;

@@ -53,7 +53,8 @@ class App extends Component {
                 </div>
             )
         } else {
-            console.log(this.state.currentArticle);
+            const articleObject = this.state.currentArticle.map(article => Object.assign({}, article));
+            console.log(articleObject);
             return (
                 <div className="App">
                     <Header
@@ -62,7 +63,7 @@ class App extends Component {
                         data={this.state.data}
                         changeHandler={this.changeHandler}
                     />
-                    <CardDetails currentArticle={this.state.currentArticle} />
+                    <CardDetails currentArticle={articleObject.name} />
                 </div>
             )
         }
