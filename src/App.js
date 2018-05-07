@@ -16,7 +16,7 @@ class App extends Component {
     changeHandler = (searchTerm) => {
         this.setState({
             term: searchTerm
-        })
+        });
     }
 
     componentDidMount() {
@@ -26,16 +26,16 @@ class App extends Component {
     }
 
     render() {
+        console.log(data);
         return (
             <div className="App">
                 <Header
                     title="Collection Search:"
                     add="Add"
-                    term={this.state.term}
                     data={this.state.data}
                     changeHandler={this.changeHandler}
                 />
-                <CardList data={this.state.data} />
+                <CardList data={this.state.data} term={this.state.term} />
             </div>
         )
     }
