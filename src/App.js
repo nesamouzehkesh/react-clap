@@ -54,7 +54,6 @@ class App extends Component {
             )
         } else {
             const articleObject = this.state.currentArticle[0];
-            console.log(articleObject);
             return (
                 <div className="App">
                     <Header
@@ -63,7 +62,7 @@ class App extends Component {
                         data={this.state.data}
                         changeHandler={this.changeHandler}
                     />
-                    <CardDetails currentArticle={articleObject.name} />
+                    <CardDetails currentArticle={articleObject} />
                 </div>
             )
         }
