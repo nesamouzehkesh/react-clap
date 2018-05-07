@@ -12,7 +12,7 @@ class App extends Component {
             data: [],
             term: '',
             showArticle: false,
-            currentArticle: ''
+            currentArticle: []
         }
     }
 
@@ -53,7 +53,7 @@ class App extends Component {
                 </div>
             )
         } else {
-            const articleObject = this.state.currentArticle.map(article => Object.assign({}, article));
+            const articleObject = this.state.currentArticle[0];
             console.log(articleObject);
             return (
                 <div className="App">
