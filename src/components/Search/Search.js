@@ -1,5 +1,4 @@
 import React from 'react';
-import '../../icons.css';
 import './Search.css';
 
 const Search = ({ data, changeHandler }) => (

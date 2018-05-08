@@ -1,13 +1,26 @@
 import React from 'react';
+import './CardDetails.css';
+import '../../icons.css';
 
 const CardDetails = ({ currentArticle }) => (
-    <div>
-        <div>
-            <h2>{currentArticle.name}</h2>
-            <img src={currentArticle.image2x} />
-            <a href={currentArticle.url}><p>Take me to the original posting</p></a>
+    <div className="main-container">
+        <div className="details-container">
+            <h2>
+                <span className="fi-zoom-in"></span>
+                <b>Article Name: </b>
+                <span>{currentArticle.name}</span>
+            </h2>
+            <h2>
+                <span className="fi-annotate"></span>
+                <b>Article Summary: </b>
+                <span>{currentArticle.summary}</span>
+            </h2>
+            <a href={currentArticle.url}>
+                <span className="fi-anchor"></span>
+                <span>Take me to the original posting</span>
+            </a>
         </div>
-        <button>Back</button>
+        <a href="#" className="button">Back</a>
     </div>
 )
 
