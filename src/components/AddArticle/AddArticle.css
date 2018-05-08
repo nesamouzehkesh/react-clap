@@ -1,4 +1,7 @@
 .details-container {
+    border: 5px solid rgba(20, 158, 147, .3);
+    padding: 20px;
+    margin-top: 2em;
     display: flex;
     flex-direction: column;
 }
@@ -21,13 +24,26 @@
     display: inline;
     margin: 1em;
     padding: 5px;
+    border: 5px solid rgba(20, 158, 147, 0.4);
+    border-radius: 5px;
+    font-size: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.19);
+    align-self: center;
 }
+
 
 .details-container textarea {
     margin: 1em;
     width: 50%;
     height: 50px;
+    padding: 5px;
+    border: 5px solid rgba(20, 158, 147, 0.4);
+    border-radius: 5px;
+    font-size: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.19);
+    align-self: center;
 }
+
 
 .details-container h2 span:last-child{
     padding-left: 1em;
@@ -67,11 +83,6 @@
     cursor: pointer;
 }
 
-.main-container {
-    border: 5px solid rgba(20, 158, 147, .3);
-    padding: 20px;
-    margin-top: 2em;
-}
 
 .fi-anchor {
     font-size: 30px;

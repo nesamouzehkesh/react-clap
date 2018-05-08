@@ -3,7 +3,7 @@ import './CardDetails.css';
 import '../../icons.css';
 
 const CardDetails = ({ currentArticle, renderMainList }) => (
-    <div className="main-container">
+    <div>
         <div className="details-container">
             <h2>
                 <span className="fi-zoom-in"></span>

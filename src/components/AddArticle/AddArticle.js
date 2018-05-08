@@ -3,9 +3,10 @@ import './AddArticle.css';
 
 class AddArticle extends React.Component {
     render() {
+        const renderMainList = this.props.renderMainList;
         return (
             <form >
-                <div className="main-container">
+                <div>
                     <div className="details-container">
                         <h2 className="row">
                             <span className="fi-zoom-in"></span>
@@ -22,8 +23,13 @@ class AddArticle extends React.Component {
                             <b>Article URL: </b>
                             <input />
                         </h2>
+                        <h2 className="row">
+                            <span className="fi-eye"></span>
+                            <b>Article Image: </b>
+                            <input type="file" name="pic" accept="image/*" />
+                        </h2>
                     </div>
-                    <a className="button">Back</a>
+                    <a onClick={() => renderMainList()} className="button">Back</a>
                 </div>
             </form>)
     }

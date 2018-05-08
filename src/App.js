@@ -36,6 +36,7 @@ class App extends Component {
     renderMainList = () => {
         this.setState({
             showArticle: false,
+            showAddForm: false,
             currentArticle: null
         })
     }
@@ -75,7 +76,7 @@ class App extends Component {
                         <CardDetails currentArticle={this.articleObject()} renderMainList={this.renderMainList} />
                         :
                         this.state.showAddForm ?
-                            <AddEditArticle /> :
+                            <AddEditArticle renderMainList={this.renderMainList} /> :
                             <CardList data={this.state.data} term={this.state.term} renderArticle={this.renderArticle} />
                     }
                 </div>
