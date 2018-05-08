@@ -3,6 +3,7 @@ import data from './components/data';
 import CardList from './components/CardList/CardList';
 import Header from './components/Header/Header';
 import CardDetails from './components/CardDetails/CardDetails';
+import AddEditArticle from './components/AddArticle/AddArticle';
 
 class App extends Component {
     constructor(props) {
@@ -44,6 +45,14 @@ class App extends Component {
         return articleObject;
     }
 
+    addHandler = () => {
+        this.setState({
+            showAddForm: true,
+            showArticle: false
+        })
+    }
+
+
     componentDidMount() {
         this.setState({
             data: data
@@ -58,6 +67,7 @@ class App extends Component {
                     add="Add"
                     data={this.state.data}
                     changeHandler={this.changeHandler}
+                    addHandler={this.addHandler}
                 />
 
                 <div>
@@ -65,7 +75,7 @@ class App extends Component {
                         <CardDetails currentArticle={this.articleObject()} renderMainList={this.renderMainList} />
                         :
                         this.state.showAddForm ?
-                            <p>fffff</p> :
+                            <AddEditArticle /> :
                             <CardList data={this.state.data} term={this.state.term} renderArticle={this.renderArticle} />
                     }
                 </div>

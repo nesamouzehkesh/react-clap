@@ -1,0 +1,82 @@
+.details-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.details-container h2 span{
+    margin: 1em;
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    justify-content: center;
+}
+
+.details-container input {
+    display: inline;
+    margin: 1em;
+    padding: 5px;
+}
+
+.details-container textarea {
+    margin: 1em;
+    width: 50%;
+    height: 50px;
+}
+
+.details-container h2 span:last-child{
+    padding-left: 1em;
+}
+
+.details-container h2 span:first-child{
+    display: inline;
+    font-size: 30px;
+    color: rgb(219, 71, 12);
+}
+
+.details-container a span:last-child {
+    color:  #E0B116;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 1em;
+}
+
+.details-container > a {
+    padding-left: 2em;
+}
+
+.button {
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 8px 25px 8px 25px;
+    margin-top:20px;
+    border: .5px solid  rgb(20, 158, 147);
+    background-color: rgb(14, 146, 135);
+    color: #E0B116;
+    transition: all .2s ease;
+}
+
+.button:hover {
+    border: .5px solid  rgb(7, 128, 117);
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.main-container {
+    border: 5px solid rgba(20, 158, 147, .3);
+    padding: 20px;
+    margin-top: 2em;
+}
+
+.fi-anchor {
+    font-size: 30px;
+    color: rgb(219, 71, 12);
+}
+
+
+
