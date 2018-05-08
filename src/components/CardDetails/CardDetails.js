@@ -2,7 +2,7 @@ import React from 'react';
 import './CardDetails.css';
 import '../../icons.css';
 
-const CardDetails = ({ currentArticle }) => (
+const CardDetails = ({ currentArticle, renderMainList }) => (
     <div className="main-container">
         <div className="details-container">
             <h2>
@@ -20,7 +20,7 @@ const CardDetails = ({ currentArticle }) => (
                 <span>Take me to the original posting</span>
             </a>
         </div>
-        <a href="#" className="button">Back</a>
+        <a onClick={() => renderMainList()} className="button">Back</a>
     </div>
 )
 

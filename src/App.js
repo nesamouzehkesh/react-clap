@@ -31,6 +31,12 @@ class App extends Component {
         })
     }
 
+    renderMainList = () => {
+        this.setState({
+            showArticle: false
+        })
+    }
+
     componentDidMount() {
         this.setState({
             data: data
@@ -62,7 +68,7 @@ class App extends Component {
                         data={this.state.data}
                         changeHandler={this.changeHandler}
                     />
-                    <CardDetails currentArticle={articleObject} />
+                    <CardDetails currentArticle={articleObject} renderMainList={this.renderMainList} />
                 </div>
             )
         }
