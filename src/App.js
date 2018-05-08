@@ -12,6 +12,7 @@ class App extends Component {
             data: [],
             term: '',
             showArticle: false,
+            showAddForm: false,
             currentArticle: []
         }
     }
@@ -33,8 +34,14 @@ class App extends Component {
 
     renderMainList = () => {
         this.setState({
-            showArticle: false
+            showArticle: false,
+            currentArticle: null
         })
+    }
+
+    articleObject = () => {
+        const articleObject = this.state.currentArticle[0];
+        return articleObject;
     }
 
     componentDidMount() {
@@ -44,34 +51,28 @@ class App extends Component {
     }
 
     render() {
+        return (
+            <div className="App">
+                <Header
+                    title="Collection Search:"
+                    add="Add"
+                    data={this.state.data}
+                    changeHandler={this.changeHandler}
+                />
 
+                <div>
+                    {this.state.showArticle ?
+                        <CardDetails currentArticle={this.articleObject()} renderMainList={this.renderMainList} />
+                        :
+                        this.state.showAddForm ?
+                            <p>fffff</p> :
+                            <CardList data={this.state.data} term={this.state.term} renderArticle={this.renderArticle} />
+                    }
+                </div>
 
-        if (!this.state.showArticle) {
-            return (
-                <div className="App">
-                    <Header
-                        title="Collection Search:"
-                        add="Add"
-                        data={this.state.data}
-                        changeHandler={this.changeHandler}
-                    />
-                    <CardList data={this.state.data} term={this.state.term} renderArticle={this.renderArticle} />
-                </div>
-            )
-        } else {
-            const articleObject = this.state.currentArticle[0];
-            return (
-                <div className="App">
-                    <Header
-                        title="Collection Search:"
-                        add="Add"
-                        data={this.state.data}
-                        changeHandler={this.changeHandler}
-                    />
-                    <CardDetails currentArticle={articleObject} renderMainList={this.renderMainList} />
-                </div>
-            )
-        }
+            </div>
+        )
+
     }
 
 }
