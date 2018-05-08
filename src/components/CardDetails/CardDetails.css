@@ -1,31 +1,34 @@
-.details-container h2 span{
-    margin: 1em;
-    display: block;
-    color: #fff;
-    font-size: 16px;
-    justify-content: center;
-}
 
-.details-container h2 span:last-child{
-    padding-left: 1em;
-}
 
-.details-container h2 span:first-child{
-    display: inline;
+.details-container > span{
     font-size: 30px;
     color: rgb(219, 71, 12);
+    margin-right: 1em;
 }
 
-.details-container a span:last-child {
+.details-container > span span{
+    font-size: 25px;
     color:  #E0B116;
-    text-decoration: none;
-    font-size: 16px;
-    margin: 1em;
+    margin-left: 1em;
 }
 
-.details-container > a {
-    padding-left: 2em;
+.details-container > p {
+    color: #fff;
+    margin: 15px;
+    font-size: 18px;
 }
+
+.details-container > a > span{
+    font-size: 30px;
+    color: rgb(219, 71, 12);
+    margin-right: 1em;
+}
+.details-container .backlink{
+    color: #E0B116;
+    font-size: 20px;
+    margin-left: 1em;
+}
+
 
 .button {
     display: inline-block;
@@ -49,5 +52,21 @@
     color: rgb(219, 71, 12);
 }
 
+.footer {
+    display: flex;
+    list-style: none;
+    text-transform: uppercase;
+    color: rgb(219, 71, 12);
+    margin-top: 20px;
+    font-size: 32px;
+    justify-content: flex-end;
+}
 
+footer .icon {
+    margin-right: 10px;
+    -webkit-transition: .25s color ease-in-out;
+    -moz-transition: .25s color ease-in-out;
+    -o-transition: .25s color ease-in-out;
+    transition: .25s color ease-in-out;
+}
 
