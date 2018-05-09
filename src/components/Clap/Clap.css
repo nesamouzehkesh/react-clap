@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
+
+/*========================
+    FLEXBOX ALIGNMENT 
+  =======================*/
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: Montserrat;
+}
+
+/*========================
+    BASIC styles
+  =======================*/
+* {
+  box-sizing: border-box
+}
+
+/*========================
+    BUTTON styles
+  =======================*/
+
+.clap {
+  position: relative;
+  outline: 1px solid transparent;
+  border-radius: 50%;
+  border: 1px solid rgba(189,195,199 ,1);
+  width: 80px;
+  height: 80px; 
+  background: none;
+}
+  p::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50%;
+    /*border: 1px solid rgba(189,195,199 ,1);*/
+    width: 80px - 1px;
+    height: 80px - 1px;
+  }
+  p:hover {
+   cursor: pointer;
+   border: 1px solid  rgba(39,174,96 ,1);
+   transition: border-color 0.3s ease-in;
+  }
+  p:hover::after {
+    animation: shockwave 1s ease-in infinite;
+  } 
+
+  svg {
+    width: 40px;
+    fill: none;
+    stroke:  rgba(39,174,96 ,1);
+    stroke-width: 2px;
+  }
+
+  svg:checked {
+    fill:  rgba(39,174,96 ,1);
+    stroke: #fff;
+    stroke-width: 1px;
+  }
+
+  .clap--count {
+    position: absolute;
+    top: -80px/1.6;
+    left: 80px/4;
+    font-size: 0.8rem;
+    color: white;
+    background:  rgba(39,174,96 ,1);
+    border-radius: 50%;
+    height: 80px/2;
+    width: 80px/2;
+    line-height: 80px/2;
+  }
+  .clap--count-total {
+    position: absolute;
+    font-size: 0.8rem;
+    width: 80px;
+    text-align: center;
+    left: 0;
+    top: -80px/3.5;
+    color: rgba(189,195,199 ,1); 
+  }
+
+/*====================
+        Message
+======================*/
+#message {
+  position: absolute;
+  bottom: 20px;
+  color:  rgba(39,174,96 ,1);
+  line-height: 1.52rem;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+#message a {
+    color: rgba(189,195,199 ,1);
+}
+
+@keyframes shockwave {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 2px  rgba(39,174,96 ,1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0;
+    box-shadow: 0 0 50px darken( rgba(39,174,96 ,1), 20%), inset 0 0 10px  rgba(39,174,96 ,1);
+  }
+}

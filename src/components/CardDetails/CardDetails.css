@@ -38,6 +38,11 @@
     font-size: 18px;
 }
 
+.paragraph {
+    pointer-events: none !important;
+}
+
+
 .details-container > a > span{
     font-size: 30px;
     color: rgb(219, 71, 12);
