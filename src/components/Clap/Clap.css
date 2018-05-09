@@ -35,11 +35,11 @@
   }  */
 
   svg {
-    width: 35px;
+    width: 38px;
     fill: none;
     stroke: rgba(161, 216, 212, 1);
-    stroke-width: 8px;
-    margin-top: 10px;
+    stroke-width: 1px;
+    margin-top: 15px;
   }
 
   svg:checked {
@@ -50,6 +50,21 @@
 
   svg:hover {
     cursor: pointer;
+  }
+
+  .love {
+    color: rgba(161, 216, 212, .5);
+    margin-right: 8px;
+    margin-top: 50px;
+  }
+
+  .love:last-child {
+    margin-left: 8px;
+  }
+
+  .love-container {
+    display: flex;
+    align-content: center;
   }
 
   .clap--count {
