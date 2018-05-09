@@ -35,10 +35,11 @@
   }  */
 
   svg {
-    width: 40px;
+    width: 35px;
     fill: none;
-    stroke:  rgba(39,174,96 ,1);
-    stroke-width: 2px;
+    stroke: rgba(161, 216, 212, 1);
+    stroke-width: 8px;
+    margin-top: 10px;
   }
 
   svg:checked {
