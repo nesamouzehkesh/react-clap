@@ -18,14 +18,31 @@
     font-size: 20px;
 }
 
+.edit-plus-container {
+    display: flex;
+    margin-left: auto;
+    align-self: center;
+    align-items: baseline;
+}
 .fi-plus {
-    font-size: 25px;
-    transition: 0.2s ease;
+    font-size: 20px;
     margin-right: 30px;
     transition: .5s ease;
     margin-left: auto;
-    align-self: center;
 }
+
+.fi-page-edit {
+    font-size: 20px;
+    margin-right: 50px;
+    transition: .5s ease;
+
+}
+
+.fi-page-edit:hover {
+    color: rgb(224, 177, 22);
+    cursor: pointer;
+}
+
 
 .fi-plus:hover {
     color: rgb(224, 177, 22);

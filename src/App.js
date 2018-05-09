@@ -69,6 +69,7 @@ class App extends Component {
                     data={this.state.data}
                     changeHandler={this.changeHandler}
                     addHandler={this.addHandler}
+                    showArticle={this.state.showArticle}
                 />
 
                 <div>
