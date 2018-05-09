@@ -1,17 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
 
 /*========================
-    FLEXBOX ALIGNMENT 
-  =======================*/
-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  font-family: Montserrat;
-}
-
-/*========================
     BASIC styles
   =======================*/
 * {
@@ -30,6 +19,7 @@ body {
   width: 80px;
   height: 80px; 
   background: none;
+  margin-top: 20px;
 }
   p::after {
     content: "";

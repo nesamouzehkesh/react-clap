@@ -22,7 +22,6 @@ const CardDetails = ({ currentArticle, renderMainList }) => (
             <Clap />
 
             <ul className="footer">
-                <li><a href="#" className="icon"><img src={require('./paw2.png')} alt="paw" /></a></li>
                 <li><a href="#" className="icon fi-social-facebook"></a></li>
                 <li><a href="#" className="icon fi-social-twitter"></a></li>
                 <li><a href="#" className="icon fi-social-google-plus"></a></li>
