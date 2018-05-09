@@ -25,14 +25,16 @@
     width: 80px - 1px;
     height: 80px - 1px;
   }
-  /* p:hover {
-   cursor: pointer;
-   border: 1px solid  rgba(39,174,96 ,1);
-   transition: border-color 0.3s ease-in;
-  }
-  p:hover::after {
+
+  #clap:hover::after {
     animation: shockwave 1s ease-in infinite;
-  }  */
+  }
+
+  #clap:hover {
+    cursor: pointer;
+    border: 1px solid  rgba(39,174,96 ,1);
+    transition: border-color 0.3s ease-in;
+  }
 
   svg {
     width: 38px;
@@ -46,10 +48,6 @@
     fill:  rgba(39,174,96 ,1);
     stroke: #fff;
     stroke-width: 1px;
-  }
-
-  svg:hover {
-    cursor: pointer;
   }
 
   .love {
