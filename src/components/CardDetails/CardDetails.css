@@ -97,6 +97,10 @@
     color: rgb(161, 216, 212);
 }
 
+.icon:hover {
+    color:  rgb(219, 71, 12);
+}
+
 .footer img {
     margin-right: 5px;
     width: 60px;
