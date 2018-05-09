@@ -1,13 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
 
 /*========================
-    BASIC styles
-  =======================*/
-* {
-  box-sizing: border-box
-}
-
-/*========================
     BUTTON styles
   =======================*/
 
@@ -32,14 +25,14 @@
     width: 80px - 1px;
     height: 80px - 1px;
   }
-  p:hover {
+  /* p:hover {
    cursor: pointer;
    border: 1px solid  rgba(39,174,96 ,1);
    transition: border-color 0.3s ease-in;
   }
   p:hover::after {
     animation: shockwave 1s ease-in infinite;
-  } 
+  }  */
 
   svg {
     width: 40px;
@@ -52,6 +45,10 @@
     fill:  rgba(39,174,96 ,1);
     stroke: #fff;
     stroke-width: 1px;
+  }
+
+  svg:hover {
+    cursor: pointer;
   }
 
   .clap--count {
