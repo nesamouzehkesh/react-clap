@@ -3,7 +3,7 @@ import data from './components/data';
 import CardList from './components/CardList/CardList';
 import Header from './components/Header/Header';
 import CardDetails from './components/CardDetails/CardDetails';
-import AddArticle from './components/AddArticle/AddArticle';
+import AddEditArticle from './components/AddEditArticle/AddEditArticle';
 
 class App extends Component {
     constructor(props) {
@@ -71,6 +71,7 @@ class App extends Component {
                     changeHandler={this.changeHandler}
                     addHandler={this.addHandler}
                     showArticle={this.state.showArticle}
+                    showAddForm={this.state.showAddForm}
                     currentArticle={this.articleObject()}
                     editHandler={this.editHandler}
                 />
@@ -80,14 +81,18 @@ class App extends Component {
                         <CardDetails
                             currentArticle={this.articleObject()}
                             renderMainList={this.renderMainList}
+                            showAddForm={this.state.showAddForm}
                         />
                         :
                         this.state.showAddForm ?
-                            <AddArticle renderMainList={this.renderMainList} /> :
+                            <AddEditArticle
+                                renderMainList={this.renderMainList}
+                                showAddForm={this.state.showAddForm} /> :
                             <CardList
                                 data={this.state.data}
                                 term={this.state.term}
-                                renderArticle={this.renderArticle} />
+                                renderArticle={this.renderArticle}
+                            />
                     }
                 </div>
 

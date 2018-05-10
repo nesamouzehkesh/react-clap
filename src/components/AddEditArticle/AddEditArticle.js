@@ -1,13 +1,21 @@
 import React from 'react';
-import './AddArticle.css';
+import './AddEditArticle.css';
 
-class AddArticle extends React.Component {
+class AddEditArticle extends React.Component {
     render() {
-        const renderMainList = this.props.renderMainList;
+        const { renderMainList, showAddForm } = this.props;
+
+
+
         return (
             <form >
                 <div>
                     <div className="details-container">
+                        <h2 className="row">
+                            <span className="fi-zoom-in"></span>
+                            <b>Article Id: </b>
+                            <input />
+                        </h2>
                         <h2 className="row">
                             <span className="fi-zoom-in"></span>
                             <b>Article Name: </b>
@@ -36,4 +44,4 @@ class AddArticle extends React.Component {
 
 };
 
-export default AddArticle;
+export default AddEditArticle;

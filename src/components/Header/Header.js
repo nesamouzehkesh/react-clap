@@ -10,25 +10,34 @@ const Header = (
         changeHandler,
         addHandler,
         editHandler,
-        showArticle
+        showArticle,
+        showAddForm
     }
 ) =>
     (
         <div >
             {!showArticle ?
-                <div className="header-container">
-                    <div className="fi-paw">
-                        <p>Collection Search:</p>
+                !showAddForm ?
+                    <div className="header-container">
+                        <div className="fi-paw">
+                            <p>Collection Search:</p>
+                        </div>
+                        <Search data={data} changeHandler={changeHandler} />
+                        <div className="fi-plus" onClick={addHandler}>{` Add`}</div>
                     </div>
-                    <Search data={data} changeHandler={changeHandler} />
-                    <div className="fi-plus" onClick={addHandler}>{` Add`}</div>
-                </div>
+                    :
+                    <div className="header-container">
+                        <div className="fi-paw">
+                            <p>Collection Search:</p>
+                        </div>
+                        <Search data={data} changeHandler={changeHandler} />
+                    </div>
                 :
                 <div className="header-container">
                     <div className="fi-paw">
                         <p>Article Id: {currentArticle.id}</p>
                     </div>
-                    <div className="fi-page-edit" onClick={editHandler}>{` Edit`}</div>
+                    <div className="fi-page-edit" onClick={() => editHandler(currentArticle)}>{` Edit`}</div>
                 </div>
 
             }
