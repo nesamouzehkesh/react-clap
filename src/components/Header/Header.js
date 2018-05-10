@@ -3,19 +3,20 @@ import './Header.css';
 import '../../icons.css';
 import Search from '../Search/Search';
 
-const Header = ({ title, add, data, changeHandler, addHandler, showArticle }) => {
+const Header = ({ currentArticle, data, changeHandler, addHandler, showArticle }) => {
     return (
-        <div className="header-container">
-            <div className="fi-paw">
-                <p>{title}</p>
-            </div>
-            <Search data={data} changeHandler={changeHandler} />
+        <div >
             {!showArticle ?
-                <div className="fi-plus" onClick={addHandler}>{` ${add}`}</div>
+                <div className="header-container">
+                    <div className="fi-paw">
+                        <p>Collection Search:</p>
+                    </div>
+                    <Search data={data} changeHandler={changeHandler} />
+                    <div className="fi-plus" onClick={addHandler}>{` Add`}</div>
+                </div>
                 :
-                <div className="edit-plus-container">
-                    <div className="fi-plus" onClick={addHandler}>{` ${add}`}</div>
-                    <div className="fi-page-edit">Edit</div>
+                <div className="fi-paw">
+                    <p>Article Id: {currentArticle.id}</p>
                 </div>
             }
         </div>

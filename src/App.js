@@ -3,7 +3,7 @@ import data from './components/data';
 import CardList from './components/CardList/CardList';
 import Header from './components/Header/Header';
 import CardDetails from './components/CardDetails/CardDetails';
-import AddEditArticle from './components/AddArticle/AddArticle';
+import AddArticle from './components/AddArticle/AddArticle';
 
 class App extends Component {
     constructor(props) {
@@ -37,7 +37,7 @@ class App extends Component {
         this.setState({
             showArticle: false,
             showAddForm: false,
-            currentArticle: null
+            currentArticle: []
         })
     }
 
@@ -53,6 +53,9 @@ class App extends Component {
         })
     }
 
+    editHandler = () => {
+
+    }
 
     componentDidMount() {
         this.setState({
@@ -64,12 +67,12 @@ class App extends Component {
         return (
             <div className="App">
                 <Header
-                    title="Collection Search:"
-                    add="Add"
                     data={this.state.data}
                     changeHandler={this.changeHandler}
                     addHandler={this.addHandler}
+                    editHandler={this.editHandler}
                     showArticle={this.state.showArticle}
+                    currentArticle={this.articleObject()}
                 />
 
                 <div>
@@ -77,7 +80,7 @@ class App extends Component {
                         <CardDetails currentArticle={this.articleObject()} renderMainList={this.renderMainList} />
                         :
                         this.state.showAddForm ?
-                            <AddEditArticle renderMainList={this.renderMainList} /> :
+                            <AddArticle renderMainList={this.renderMainList} /> :
                             <CardList data={this.state.data} term={this.state.term} renderArticle={this.renderArticle} />
                     }
                 </div>

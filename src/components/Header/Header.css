@@ -2,11 +2,8 @@
 
 .header-container {
     display: flex;
-    margin: 20px;
-    width: 900px;
+    margin-top: 20px;
     flex-wrap: wrap;
-    align-content: flex-start;
-    justify-items: center;
 }
 
 .fi-paw {
@@ -27,9 +24,9 @@
 }
 .fi-plus {
     font-size: 20px;
-    margin-right: 30px;
-    transition: .5s ease;
+    margin-right: 60px;
     margin-left: auto;
+    margin-top: 30px;
 }
 
 .fi-page-edit {

@@ -3,12 +3,13 @@ import './CardDetails.css';
 import '../../icons.css';
 import Clap from '../Clap/Clap';
 
-const CardDetails = ({ currentArticle, renderMainList }) => (
+const CardDetails = ({ currentArticle, renderMainList, editHandler }) => (
     <div>
         <div className="details-container">
             <span className="fi-zoom-in">
                 <span><b>Article Name: </b></span>
             </span>
+            <div className="fi-page-edit" onClick={editHandler}>{` Edit`}</div>
             <p className="paragraph">{currentArticle.name}</p>
 
             <span className="fi-annotate">
