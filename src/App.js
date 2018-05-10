@@ -60,6 +60,31 @@ class App extends Component {
         })
     }
 
+    saveHandler = (id, name, summary, url) => {
+        const { data } = this.state;
+        const currentArticle = this.state.currentArticle[0];
+        console.log(currentArticle);
+
+        const editedArticle = Object.assign({}, currentArticle,
+            {
+                id: id,
+                name: name,
+                summary: summary,
+                url: url
+            });
+
+        const newDataArray = data.map(article => article === currentArticle ? editedArticle : article);
+        console.log(newDataArray);
+
+        this.setState({
+            data: newDataArray,
+            showAddForm: false,
+
+        });
+    }
+
+    createHandler = () => { }
+
     componentDidMount() {
         this.setState({
             data: data
@@ -81,11 +106,13 @@ class App extends Component {
 
                 <div>
                     {this.state.showArticle ?
-                        this.state.addShowForm ? <AddEditArticle
-                            renderMainList={this.renderMainList}
-                            showAddForm={this.state.showAddForm}
-                            currentArticle={this.articleObject()}
-                        /> :
+                        this.state.addShowForm ?
+                            <AddEditArticle
+                                renderMainList={this.renderMainList}
+                                showAddForm={this.state.showAddForm}
+                                currentArticle={this.articleObject()}
+                                saveHandler={this.saveHandler}
+                            /> :
                             <CardDetails
                                 currentArticle={this.articleObject()}
                                 renderMainList={this.renderMainList}
@@ -97,6 +124,7 @@ class App extends Component {
                                 renderMainList={this.renderMainList}
                                 showAddForm={this.state.showAddForm}
                                 currentArticle={this.articleObject()}
+                                createHandler={this.createHandler}
                             /> :
                             <CardList
                                 data={this.state.data}

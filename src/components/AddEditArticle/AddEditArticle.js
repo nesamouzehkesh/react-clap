@@ -13,15 +13,16 @@ class AddEditArticle extends React.Component {
             image: '',
             created: false,
         }
+
+        this.setStateFromCurrentArticle = this.setStateFromCurrentArticle.bind(this);
+
     }
 
     componentDidMount() {
-        console.log(this.props.currentArticle);
         this.setStateFromCurrentArticle(this.props.currentArticle);
     }
 
     setStateFromCurrentArticle(currentArticle) {
-        console.log(currentArticle);
         this.setState({
             id: !currentArticle ? '' : currentArticle.id,
             name: !currentArticle ? '' : currentArticle.name,
@@ -29,17 +30,64 @@ class AddEditArticle extends React.Component {
             url: !currentArticle ? '' : currentArticle.url,
             image: !currentArticle ? '' : currentArticle.image,
         });
-        console.log(this.state);
+    }
+
+    handleChangeId = (e) => {
+        this.setState({
+            id: e.target.value
+        });
     }
 
 
+    handleChangeName = (e) => {
+        this.setState({
+            name: e.target.value
+        });
+    }
+
+
+    handleChangeSummary = (e) => {
+        this.setState({
+            summary: e.target.value
+        });
+    }
+
+
+    handleChangeUrl = (e) => {
+        this.setState({
+            url: e.target.value
+        });
+    }
+
+    resetForm = () => {
+        this.setState({
+            id: '',
+            name: '',
+            summary: '',
+            url: ''
+        })
+    }
+
+    handleSubmit = (e) => {
+        e.preventDefault();
+        const { id, name, summary, url } = this.state;
+
+        this.state.currentArticle ? this.props.saveHandler(id, name, summary, url)
+            : this.props.createHandler(id, name, summary, url);
+
+        this.resetForm();
+        this.setState({
+            created: true
+        });
+    }
+
     render() {
-        const { renderMainList, showAddForm } = this.props;
+        const { renderMainList, showAddForm, currentArticle } = this.props;
 
 
 
         return (
-            <form >
+            <form onSubmit={this.handleSubmit}>
                 <div>
                     <div className="details-container">
                         <h2 className="row">
@@ -81,21 +129,21 @@ class AddEditArticle extends React.Component {
                                 placeholder="Enter article url"
                                 type="text"
                                 value={this.state.url}
-                                onChange={this.state.url}
+                                onChange={this.handleChangeUrl}
                             />
                         </h2>
-                        <h2 className="row">
+                        {/* <h2 className="row">
                             <span className="fi-paperclip"></span>
                             <label htmlFor="image">Article Image: </label>
                             <input
                                 id="image"
                                 type="file"
                                 name="pic"
-                                accept="image/*"
+                                accept="file_extension"
                                 value={this.state.image}
                                 onChange={() => { }} />
-                        </h2>
-                        <input type="submit" value={showAddForm ? 'Save' : 'Create'} />
+                        </h2> */}
+                        <input type="submit" value={currentArticle ? 'Save' : 'Create'} />
                     </div>
                     <a onClick={() => renderMainList()} className="button">Back</a>
                 </div>
