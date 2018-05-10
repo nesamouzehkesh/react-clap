@@ -3,13 +3,12 @@ import './CardDetails.css';
 import '../../icons.css';
 import Clap from '../Clap/Clap';
 
-const CardDetails = ({ currentArticle, renderMainList, editHandler }) => (
+const CardDetails = ({ currentArticle, renderMainList }) => (
     <div>
         <div className="details-container">
             <span className="fi-zoom-in">
                 <span><b>Article Name: </b></span>
             </span>
-            <div className="fi-page-edit" onClick={editHandler}>{` Edit`}</div>
             <p className="paragraph">{currentArticle.name}</p>
 
             <span className="fi-annotate">
@@ -17,9 +16,10 @@ const CardDetails = ({ currentArticle, renderMainList, editHandler }) => (
             </span>
             <p className="paragraph">{currentArticle.summary}</p>
 
-            <span className="fi-anchor"><a className="backlink" href={currentArticle.url}>
-                Take me to the original posting
-            </a></span>
+            <span className="fi-anchor">
+                <a className="backlink" href={currentArticle.url}>
+                    Take me to the original posting</a>
+            </span>
             <Clap />
 
             <ul className="footer">

@@ -30,6 +30,12 @@
     margin-left: 1em;
 }
 
+.details-container > span a{
+    font-size: 40px;
+    margin-left: 500px;
+    margin-right: 0px;
+}
+
 .details-container > p {
     color: rgb(161, 216, 212);
     margin-top: 10px;
@@ -38,16 +44,12 @@
     font-size: 18px;
 }
 
+
 .paragraph {
     pointer-events: none !important;
 }
 
 
-.details-container > a > span{
-    font-size: 30px;
-    color: rgb(219, 71, 12);
-    margin-right: 1em;
-}
 .details-container .backlink{
     color: #E0B116;
     font-size: 15px;
@@ -86,6 +88,7 @@
     font-size: 30px;
     justify-content: flex-end;
     align-items: baseline;
+    
 }
 
 .footer .icon {

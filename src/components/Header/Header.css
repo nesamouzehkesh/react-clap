@@ -31,8 +31,9 @@
 
 .fi-page-edit {
     font-size: 20px;
-    margin-right: 50px;
-    transition: .5s ease;
+    margin-right: 60px;
+    margin-left: auto;
+    margin-top: 30px;
 
 }
 

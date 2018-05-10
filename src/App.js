@@ -53,7 +53,7 @@ class App extends Component {
         })
     }
 
-    editHandler = () => {
+    editHandler = (currentArticle) => {
 
     }
 
@@ -70,18 +70,24 @@ class App extends Component {
                     data={this.state.data}
                     changeHandler={this.changeHandler}
                     addHandler={this.addHandler}
-                    editHandler={this.editHandler}
                     showArticle={this.state.showArticle}
                     currentArticle={this.articleObject()}
+                    editHandler={this.editHandler}
                 />
 
                 <div>
                     {this.state.showArticle ?
-                        <CardDetails currentArticle={this.articleObject()} renderMainList={this.renderMainList} />
+                        <CardDetails
+                            currentArticle={this.articleObject()}
+                            renderMainList={this.renderMainList}
+                        />
                         :
                         this.state.showAddForm ?
                             <AddArticle renderMainList={this.renderMainList} /> :
-                            <CardList data={this.state.data} term={this.state.term} renderArticle={this.renderArticle} />
+                            <CardList
+                                data={this.state.data}
+                                term={this.state.term}
+                                renderArticle={this.renderArticle} />
                     }
                 </div>
 
