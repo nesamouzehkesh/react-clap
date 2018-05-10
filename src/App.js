@@ -54,7 +54,10 @@ class App extends Component {
     }
 
     editHandler = (currentArticle) => {
-
+        this.setState({
+            showAddForm: true,
+            showArticle: false,
+        })
     }
 
     componentDidMount() {
@@ -78,16 +81,23 @@ class App extends Component {
 
                 <div>
                     {this.state.showArticle ?
-                        <CardDetails
-                            currentArticle={this.articleObject()}
+                        this.state.addShowForm ? <AddEditArticle
                             renderMainList={this.renderMainList}
                             showAddForm={this.state.showAddForm}
-                        />
+                            currentArticle={this.articleObject()}
+                        /> :
+                            <CardDetails
+                                currentArticle={this.articleObject()}
+                                renderMainList={this.renderMainList}
+                                showAddForm={this.state.showAddForm}
+                            />
                         :
                         this.state.showAddForm ?
                             <AddEditArticle
                                 renderMainList={this.renderMainList}
-                                showAddForm={this.state.showAddForm} /> :
+                                showAddForm={this.state.showAddForm}
+                                currentArticle={this.articleObject()}
+                            /> :
                             <CardList
                                 data={this.state.data}
                                 term={this.state.term}

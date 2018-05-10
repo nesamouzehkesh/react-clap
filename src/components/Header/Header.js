@@ -28,9 +28,8 @@ const Header = (
                     :
                     <div className="header-container">
                         <div className="fi-paw">
-                            <p>Collection Search:</p>
+                            <p>Your New Article:</p>
                         </div>
-                        <Search data={data} changeHandler={changeHandler} />
                     </div>
                 :
                 <div className="header-container">
