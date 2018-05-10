@@ -12,7 +12,6 @@ class App extends Component {
         this.state = {
             data: [],
             term: '',
-            showArticle: false,
             showAddForm: false,
             currentArticle: []
         }
@@ -28,14 +27,12 @@ class App extends Component {
     renderArticle = (articleId) => {
         const theArticle = data.filter(article => article.id === articleId);
         this.setState({
-            showArticle: true,
             currentArticle: theArticle
         })
     }
 
     renderMainList = () => {
         this.setState({
-            showArticle: false,
             showAddForm: false,
             currentArticle: []
         })
@@ -49,14 +46,12 @@ class App extends Component {
     addHandler = () => {
         this.setState({
             showAddForm: true,
-            showArticle: false
         })
     }
 
     editHandler = (currentArticle) => {
         this.setState({
             showAddForm: true,
-            showArticle: false,
         })
     }
 
@@ -79,7 +74,6 @@ class App extends Component {
         this.setState({
             data: newDataArray,
             showAddForm: false,
-
         });
     }
 
@@ -91,22 +85,26 @@ class App extends Component {
         })
     }
 
+    componentWillReceiveProps(nextProps) {
+        this.setStateFromCurrentArticle(nextProps.currentArticle);
+    }
+
     render() {
+        console.log(this.state.currentArticle.length);
         return (
             <div className="App">
                 <Header
                     data={this.state.data}
                     changeHandler={this.changeHandler}
                     addHandler={this.addHandler}
-                    showArticle={this.state.showArticle}
                     showAddForm={this.state.showAddForm}
                     currentArticle={this.articleObject()}
                     editHandler={this.editHandler}
                 />
 
                 <div>
-                    {this.state.showArticle ?
-                        this.state.addShowForm ?
+                    {(this.state.currentArticle.length >= 1) ?
+                        this.state.showAddForm ?
                             <AddEditArticle
                                 renderMainList={this.renderMainList}
                                 showAddForm={this.state.showAddForm}

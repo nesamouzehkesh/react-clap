@@ -16,7 +16,7 @@ const Header = (
 ) =>
     (
         <div >
-            {!showArticle ?
+            {!currentArticle ?
                 !showAddForm ?
                     <div className="header-container">
                         <div className="fi-paw">

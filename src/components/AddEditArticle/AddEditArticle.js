@@ -10,7 +10,6 @@ class AddEditArticle extends React.Component {
             name: '',
             summary: '',
             url: '',
-            image: '',
             created: false,
         }
 
@@ -28,7 +27,6 @@ class AddEditArticle extends React.Component {
             name: !currentArticle ? '' : currentArticle.name,
             summary: !currentArticle ? '' : currentArticle.summary,
             url: !currentArticle ? '' : currentArticle.url,
-            image: !currentArticle ? '' : currentArticle.image,
         });
     }
 
@@ -59,24 +57,21 @@ class AddEditArticle extends React.Component {
         });
     }
 
-    resetForm = () => {
-        this.setState({
-            id: '',
-            name: '',
-            summary: '',
-            url: ''
-        })
-    }
-
     handleSubmit = (e) => {
         e.preventDefault();
         const { id, name, summary, url } = this.state;
 
-        this.state.currentArticle ? this.props.saveHandler(id, name, summary, url)
-            : this.props.createHandler(id, name, summary, url);
+        if (this.props.currentArticle) {
+            this.props.saveHandler(id, name, summary, url);
+        } else {
+            this.props.createHandler(id, name, summary, url);
+        }
 
-        this.resetForm();
         this.setState({
+            id: '',
+            name: '',
+            summary: '',
+            url: '',
             created: true
         });
     }
