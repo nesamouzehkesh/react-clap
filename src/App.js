@@ -58,7 +58,6 @@ class App extends Component {
     saveHandler = (id, name, summary, url) => {
         const { data } = this.state;
         const currentArticle = this.state.currentArticle[0];
-        console.log(currentArticle);
 
         const editedArticle = Object.assign({}, currentArticle,
             {
@@ -69,11 +68,10 @@ class App extends Component {
             });
 
         const newDataArray = data.map(article => article === currentArticle ? editedArticle : article);
-        console.log(newDataArray);
-
         this.setState({
             data: newDataArray,
             showAddForm: false,
+            currentArticle: editedArticle,
         });
     }
 
