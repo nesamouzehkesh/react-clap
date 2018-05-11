@@ -15,7 +15,6 @@ class App extends Component {
             showAddForm: false,
             currentArticle: {},
             toggle: false, // toggle is true for any view other than the main list/page
-            changeOnEdit: false
         }
     }
 
@@ -36,8 +35,7 @@ class App extends Component {
     }
 
     renderMainList = () => {
-        /** basically: which `Back` did you click on? The `Back` in form page or the `Back` in details page? */
-        if (!this.state.showAddForm) { //means you hit `Back` in details page
+        if (!this.state.showAddForm) {
             this.setState({
                 toggle: false,
                 currentArticle: {}
@@ -46,9 +44,7 @@ class App extends Component {
             this.setState({
                 showAddForm: false,
                 toggle: false,
-                changeOnEdit: false // becasue if you have made changes you would have clicked on `Save`
             })
-
         }
     }
 
@@ -80,7 +76,6 @@ class App extends Component {
             showAddForm: false,
             toggle: true,
             currentArticle: editedArticle,
-            changeOnEdit: true // because clicking on `Save` means you made changes 
         });
     }
 

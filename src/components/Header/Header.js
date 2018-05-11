@@ -57,8 +57,6 @@ const Header = (
                             <Search data={data} changeHandler={changeHandler} />
                             <div className="fi-plus" onClick={addHandler}>{` Add`}</div>
                         </div>
-
-
             }
         </div>
     )
