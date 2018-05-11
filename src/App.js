@@ -26,11 +26,8 @@ class App extends Component {
     }
 
     renderArticle = (articleId) => {
-        console.log(this.state.data);
         const selected = data.filter(article => article.id === articleId);
-        console.log(selected);
         const theArticle = selected[0];
-        console.log(theArticle);
         this.setState({
             currentArticle: theArticle,
             toggle: true
@@ -38,10 +35,19 @@ class App extends Component {
     }
 
     renderMainList = () => {
-        this.setState({
-            showAddForm: false,
-            toggle: false
-        })
+        if (!this.state.showAddForm) { //means you visited an article but hit `Back` without editing
+            this.setState({
+                showAddForm: false,
+                toggle: false,
+                currentArticle: {}
+            })
+        } else {
+            this.setState({
+                showAddForm: false,
+                toggle: false,
+            })
+
+        }
     }
 
     addHandler = () => {

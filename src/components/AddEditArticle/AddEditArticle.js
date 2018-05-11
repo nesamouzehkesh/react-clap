@@ -132,7 +132,7 @@ class AddEditArticle extends React.Component {
                                 value={this.state.image}
                                 onChange={() => { }} />
                         </h2> */}
-                        <input type="submit" value={currentArticle ? 'Save' : 'Create'} />
+                        <input type="submit" value={Object.keys(currentArticle).length !== 0 ? 'Save' : 'Create'} />
                     </div>
                     <a onClick={() => renderMainList()} className="button">Back</a>
                 </div>
