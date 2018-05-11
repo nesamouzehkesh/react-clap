@@ -26,7 +26,7 @@ class App extends Component {
     }
 
     renderArticle = (articleId) => {
-        const selected = data.filter(article => article.id === articleId);
+        const selected = this.state.data.filter(article => article.id === articleId);
         const theArticle = selected[0];
         this.setState({
             currentArticle: theArticle,
