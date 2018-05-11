@@ -14,7 +14,7 @@ class App extends Component {
             term: '',
             showAddForm: false,
             currentArticle: {},
-            toggle: false
+            toggle: false // toggle is true for any view other than the main list/page
         }
     }
 
@@ -35,9 +35,9 @@ class App extends Component {
     }
 
     renderMainList = () => {
+
         if (!this.state.showAddForm) { //means you visited an article but hit `Back` without editing
             this.setState({
-                showAddForm: false,
                 toggle: false,
                 currentArticle: {}
             })

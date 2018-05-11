@@ -33,12 +33,20 @@ const Header = (
                         </div>
                     </div>
                 :
-                <div className="header-container">
-                    <div className="fi-paw">
-                        <p>Article Id: {currentArticle.id}</p>
+                !showAddForm && !toggle ?
+                    <div className="header-container">
+                        <div className="fi-paw">
+                            <p>Collection Search:</p>
+                        </div>
+                        <Search data={data} changeHandler={changeHandler} />
+                        <div className="fi-plus" onClick={addHandler}>{` Add`}</div>
+                    </div> :
+                    <div className="header-container">
+                        <div className="fi-paw">
+                            <p>Article Id: {currentArticle.id}</p>
+                        </div>
+                        <div className="fi-page-edit" onClick={() => editHandler(currentArticle)}>{` Edit`}</div>
                     </div>
-                    <div className="fi-page-edit" onClick={() => editHandler(currentArticle)}>{` Edit`}</div>
-                </div>
 
             }
         </div>
