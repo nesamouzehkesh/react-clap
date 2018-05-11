@@ -17,6 +17,7 @@ const Header = (
 ) =>
     (
         <div >
+
             {Object.keys(currentArticle).length == 0 && !toggle ?
                 !showAddForm ?
                     <div className="header-container">
@@ -26,27 +27,37 @@ const Header = (
                         <Search data={data} changeHandler={changeHandler} />
                         <div className="fi-plus" onClick={addHandler}>{` Add`}</div>
                     </div>
+                    /* otherwise you have clicked on `add` */
                     :
                     <div className="header-container">
                         <div className="fi-paw">
                             <p>Your New Article:</p>
                         </div>
                     </div>
+
                 :
-                !showAddForm && !toggle ?
-                    <div className="header-container">
-                        <div className="fi-paw">
-                            <p>Collection Search:</p>
-                        </div>
-                        <Search data={data} changeHandler={changeHandler} />
-                        <div className="fi-plus" onClick={addHandler}>{` Add`}</div>
-                    </div> :
+                !showAddForm && toggle ?
                     <div className="header-container">
                         <div className="fi-paw">
                             <p>Article Id: {currentArticle.id}</p>
                         </div>
                         <div className="fi-page-edit" onClick={() => editHandler(currentArticle)}>{` Edit`}</div>
                     </div>
+
+                    :
+                    showAddForm && toggle ?
+                        <div className="fi-paw">
+                            <p>Article Id: {currentArticle.id}</p>
+                        </div>
+                        :
+                        <div className="header-container">
+                            <div className="fi-paw">
+                                <p>Collection Search:</p>
+                            </div>
+                            <Search data={data} changeHandler={changeHandler} />
+                            <div className="fi-plus" onClick={addHandler}>{` Add`}</div>
+                        </div>
+
 
             }
         </div>
