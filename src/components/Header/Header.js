@@ -11,12 +11,13 @@ const Header = (
         addHandler,
         editHandler,
         showArticle,
-        showAddForm
+        showAddForm,
+        toggle
     }
 ) =>
     (
         <div >
-            {!currentArticle ?
+            {Object.keys(currentArticle).length == 0 && !toggle ?
                 !showAddForm ?
                     <div className="header-container">
                         <div className="fi-paw">

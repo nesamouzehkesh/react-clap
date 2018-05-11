@@ -13,7 +13,8 @@ class App extends Component {
             data: [],
             term: '',
             showAddForm: false,
-            currentArticle: []
+            currentArticle: {},
+            toggle: false
         }
     }
 
@@ -25,22 +26,22 @@ class App extends Component {
     }
 
     renderArticle = (articleId) => {
-        const theArticle = data.filter(article => article.id === articleId);
+        console.log(this.state.data);
+        const selected = data.filter(article => article.id === articleId);
+        console.log(selected);
+        const theArticle = selected[0];
+        console.log(theArticle);
         this.setState({
-            currentArticle: theArticle
+            currentArticle: theArticle,
+            toggle: true
         })
     }
 
     renderMainList = () => {
         this.setState({
             showAddForm: false,
-            currentArticle: []
+            toggle: false
         })
-    }
-
-    articleObject = () => {
-        const articleObject = this.state.currentArticle[0];
-        return articleObject;
     }
 
     addHandler = () => {
@@ -56,8 +57,7 @@ class App extends Component {
     }
 
     saveHandler = (id, name, summary, url) => {
-        const { data } = this.state;
-        const currentArticle = this.state.currentArticle[0];
+        const { data, currentArticle } = this.state;
 
         const editedArticle = Object.assign({}, currentArticle,
             {
@@ -66,13 +66,14 @@ class App extends Component {
                 summary: summary,
                 url: url
             });
-
+        console.log(editedArticle);
         const newDataArray = data.map(article => article === currentArticle ? editedArticle : article);
         this.setState({
             data: newDataArray,
             showAddForm: false,
-            currentArticle: editedArticle,
-        });
+            toggle: true,
+            currentArticle: editedArticle
+        }, () => { console.log(this.state.data) });
     }
 
     createHandler = () => { }
@@ -88,7 +89,6 @@ class App extends Component {
     }
 
     render() {
-        console.log(this.state.currentArticle.length);
         return (
             <div className="App">
                 <Header
@@ -96,21 +96,22 @@ class App extends Component {
                     changeHandler={this.changeHandler}
                     addHandler={this.addHandler}
                     showAddForm={this.state.showAddForm}
-                    currentArticle={this.articleObject()}
+                    currentArticle={this.state.currentArticle}
                     editHandler={this.editHandler}
+                    toggle={this.state.toggle}
                 />
 
                 <div>
-                    {(this.state.currentArticle.length >= 1) ?
+                    {(Object.keys(this.state.currentArticle).length !== 0 && this.state.toggle) ?
                         this.state.showAddForm ?
                             <AddEditArticle
                                 renderMainList={this.renderMainList}
                                 showAddForm={this.state.showAddForm}
-                                currentArticle={this.articleObject()}
+                                currentArticle={this.state.currentArticle}
                                 saveHandler={this.saveHandler}
                             /> :
                             <CardDetails
-                                currentArticle={this.articleObject()}
+                                currentArticle={this.state.currentArticle}
                                 renderMainList={this.renderMainList}
                                 showAddForm={this.state.showAddForm}
                             />
@@ -119,7 +120,7 @@ class App extends Component {
                             <AddEditArticle
                                 renderMainList={this.renderMainList}
                                 showAddForm={this.state.showAddForm}
-                                currentArticle={this.articleObject()}
+                                currentArticle={this.state.currentArticle}
                                 createHandler={this.createHandler}
                             /> :
                             <CardList

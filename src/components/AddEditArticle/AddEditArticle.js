@@ -14,7 +14,6 @@ class AddEditArticle extends React.Component {
         }
 
         this.setStateFromCurrentArticle = this.setStateFromCurrentArticle.bind(this);
-
     }
 
     componentDidMount() {
@@ -36,20 +35,17 @@ class AddEditArticle extends React.Component {
         });
     }
 
-
     handleChangeName = (e) => {
         this.setState({
             name: e.target.value
         });
     }
 
-
     handleChangeSummary = (e) => {
         this.setState({
             summary: e.target.value
         });
     }
-
 
     handleChangeUrl = (e) => {
         this.setState({
@@ -78,8 +74,6 @@ class AddEditArticle extends React.Component {
 
     render() {
         const { renderMainList, showAddForm, currentArticle } = this.props;
-
-
 
         return (
             <form onSubmit={this.handleSubmit}>
