@@ -38,7 +38,7 @@
 
   svg {
     width: 38px;
-    fill: none;
+    fill: rgba(161, 216, 212, 1);
     stroke: rgba(161, 216, 212, 1);
     stroke-width: 1px;
     margin-top: 15px;
