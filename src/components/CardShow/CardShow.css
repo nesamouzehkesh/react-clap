@@ -10,10 +10,10 @@
 }
 
 .delete a{
-    color:rgba(190, 177, 22, .5);
+    color: rgba(95, 167, 171, .2);
     margin: 3px;
     transition: .5s ease;
-    font-size: small;
+    font-size: medium;
 }
 
 .delete:hover a{
