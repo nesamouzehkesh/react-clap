@@ -14,6 +14,7 @@
 * Routing + Redux
 * Type checking (`flow` maybe)
 * Linting
+* Testing
 * Adding a simple backend
 
 ## App features:
