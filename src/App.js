@@ -34,6 +34,13 @@ class App extends Component {
         })
     }
 
+    deleteArticle = (articleId) => {
+        const filteredData = this.state.data.filter(article => article.id !== articleId);
+        this.setState({
+            data: filteredData
+        })
+    }
+
     renderMainList = () => {
         if (!this.state.showAddForm) {
             this.setState({
@@ -135,6 +142,7 @@ class App extends Component {
                                 data={this.state.data}
                                 term={this.state.term}
                                 renderArticle={this.renderArticle}
+                                deleteArticle={this.deleteArticle}
                             />
                     }
                 </div>

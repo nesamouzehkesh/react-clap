@@ -2,11 +2,11 @@ import React from 'react';
 import './CardShow.css';
 import '../../icons.css';
 
-const CardShow = ({ article, renderArticle }) => {
+const CardShow = ({ article, renderArticle, deleteArticle }) => {
     return (
         <li className="card">
             <div className="delete">
-                <a href="#"><span className="fi-x"></span></a>
+                <a href="#" onClick={() => deleteArticle(article.id)}><span className="fi-x"></span></a>
             </div>
             <div className="card-content">
                 <img src={article.image} alt="" className="author-image" />
