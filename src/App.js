@@ -91,6 +91,11 @@ class App extends Component {
         this.setStateFromCurrentArticle(nextProps.currentArticle);
     }
 
+    /** some getters for more readbility */
+    get articleSelectedAndNotOnMainPage() {
+        return (Object.keys(this.state.currentArticle).length !== 0 && this.state.toggle);
+    }
+
     render() {
         return (
             <div className="App">
@@ -105,7 +110,7 @@ class App extends Component {
                 />
 
                 <div>
-                    {(Object.keys(this.state.currentArticle).length !== 0 && this.state.toggle) ?
+                    {this.articleSelectedAndNotOnMainPage ?
                         this.state.showAddForm ?
                             <AddEditArticle
                                 renderMainList={this.renderMainList}
