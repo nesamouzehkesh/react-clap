@@ -41,7 +41,7 @@ export default [
   },
 
   {
-    name: 'Functional Programming',
+    name: 'Lamda',
     id: '4',
     image: './assets/img/functional.png',
     url: 'https://open.spotify.com/artist/0k17h0D3J5VfsdmQ1iZtE9',

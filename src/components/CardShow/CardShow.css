@@ -1,16 +1,34 @@
-.Card {
-border: 5px solid rgba(95, 167, 171, .2);
-border-radius: 2px;
-overflow: hidden;
+
+.card {
+    border: 5px solid rgba(95, 167, 171, .2);
+    border-radius: 2px;
+    overflow: hidden;
+    margin: 10px;
+    flex-wrap:wrap;
+    display: flex;
+    flex-direction: column;
+}
+
+.delete a{
+    color:rgba(190, 177, 22, .5);
+    margin: 3px;
+    transition: .5s ease;
+}
+
+.delete:hover a{
+    color:rgb(243, 79, 14);
+
+}
+
+.card-content {
 flex: 0 0 180px;
 display: flex;
 flex-direction: column;
 align-items: center;
-margin: 10px;
 color:#73c2ca;
 }
 
-.Card img {
+.card-content img {
     transition: transform .2s ease-in-out;
     flex:1;
     width : 60% ;
@@ -18,7 +36,7 @@ color:#73c2ca;
     border-radius: 4px ;
 }
 
-.Card img:hover {
+.card-content img:hover {
     -webkit-transform: rotate(15deg) scale(1.25, 1.25);
     -moz-transform: rotate(15deg) scale(1.25, 1.25);
     -ms-transform: rotate(15deg) scale(1.25, 1.25);
@@ -26,20 +44,20 @@ color:#73c2ca;
     transform: rotate(15deg) scale(1.25, 1.25);
 }
 
-.Card h3 {
+.card-content h3 {
     flex: 1;
     margin-bottom: auto;
     text-align: center;
     
 }
 
-.Card a {
+.card-content a {
     color:#73c2ca;
     text-decoration: none;
     transition: .5s ease;
 }
 
-.Card h3 a:hover {
+.card-content h3 a:hover {
     color:  rgb(224, 177, 22);
     cursor: pointer;
     text-decoration: none;
@@ -60,17 +78,17 @@ color:#73c2ca;
 }
 
 @media(max-width: 810px) {
-    .Card { margin: 3.5em 3.5em 2em; }
+    .card-content { margin: 3.5em 3.5em 2em; }
 }
 
 @media(max-width: 650px) {
-    .Card { margin: 1.5em; }
+    .card-content { margin: 1.5em; }
 }
 
 @media(max-width: 570px) {
-    .Card { margin: .5em;}
+    .cardcontent { margin: .5em;}
 }
 
 @media(max-width: 500px) {
-    .Card { margin: 1.5em;}
+    .card-content { margin: 1.5em;}
 }
