@@ -3,21 +3,18 @@ import './Header.css';
 import '../../icons.css';
 import Search from '../Search/Search';
 
-const Header = (
-    {
+const Header = ({
         currentArticle,
-        data,
-        changeHandler,
-        addHandler,
-        editHandler,
-        showArticle,
-        showAddForm,
-        toggle
-    }
-) =>
+    data,
+    changeHandler,
+    addHandler,
+    editHandler,
+    showArticle,
+    showAddForm,
+    toggle
+    }) =>
     (
         <div >
-
             {Object.keys(currentArticle).length == 0 && !toggle ?
                 !showAddForm ?
                     <div className="header-container">
@@ -43,7 +40,6 @@ const Header = (
                         </div>
                         <div className="fi-page-edit" onClick={() => editHandler(currentArticle)}>{` Edit`}</div>
                     </div>
-
                     :
                     showAddForm && toggle ?
                         <div className="fi-paw">
@@ -60,6 +56,5 @@ const Header = (
             }
         </div>
     )
-
 
 export default Header;
