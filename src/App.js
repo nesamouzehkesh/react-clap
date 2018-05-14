@@ -86,7 +86,18 @@ class App extends Component {
         });
     }
 
-    createHandler = () => { }
+    createHandler = (id, name, summary, url) => {
+        const newDataArray = this.state.data.concat({
+            id: id,
+            name: name,
+            summary: summary,
+            url: url
+        });
+
+        this.setState({
+            data: newDataArray
+        });
+    }
 
     componentDidMount() {
         this.setState({
