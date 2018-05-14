@@ -27,7 +27,7 @@
 
 ## How to run?
 * npm install
-* npm run
+* npm start
 * localhost:3000
 
 ## Simple demo:
