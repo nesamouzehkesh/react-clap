@@ -30,7 +30,7 @@
 * localhost:3000
 
 ## Simple demo:
-![ezgif-4-9287bb812d](https://user-images.githubusercontent.com/13462129/39979705-748e0418-578b-11e8-92b6-710e3008c2d8.gif)
 
 
-# Enjoy!
+
+# Enjoy! 
