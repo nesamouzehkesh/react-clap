@@ -3,7 +3,7 @@ export default [
     name: 'Async Await',
     id: '1',
     image: './assets/img/async.png',
-    url: 'https://open.spotify.com/artist/1QOmebWGB6FdFtW7Bo3F0W',
+    url: 'https://medium.com/beginners-guide-to-mobile-web-development/async-await-in-javascript-160ac5144b57',
     summary: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
     Nam sollicitudin elementum mollis. Aliquam aliquam elit vel augue viverra elementum. 
     Vivamus turpis est, euismod sed nulla sed, pulvinar finibus metus. Duis quis metus sed 
@@ -17,7 +17,7 @@ export default [
     name: 'CSS',
     id: '2',
     image: './assets/img/css.png',
-    url: 'https://open.spotify.com/artist/1MuQ2m2tg7naeRGAOxYZer',
+    url: 'https://medium.com/beginners-guide-to-mobile-web-development/working-with-css-variables-3f8314cdeb56',
     summary: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
     Nam sollicitudin elementum mollis. Aliquam aliquam elit vel augue viverra elementum. 
     Vivamus turpis est, euismod sed nulla sed, pulvinar finibus metus. Duis quis metus sed 
@@ -29,7 +29,7 @@ export default [
     name: 'ES6',
     id: '3',
     image: './assets/img/es6.png',
-    url: 'https://open.spotify.com/artist/53XhwfbYqKCa1cC15pYq2q',
+    url: 'https://hackernoon.com/javascript-hacks-for-es6-hipsters-67d633ce8ace',
     summary: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
     Nam sollicitudin elementum mollis. Aliquam aliquam elit vel augue viverra elementum. 
     Vivamus turpis est, euismod sed nulla sed, pulvinar finibus metus. Duis quis metus sed 
@@ -44,7 +44,7 @@ export default [
     name: 'Lamda',
     id: '4',
     image: './assets/img/functional.png',
-    url: 'https://open.spotify.com/artist/0k17h0D3J5VfsdmQ1iZtE9',
+    url: 'https://medium.com/computer-stuff/coconut-making-python-functional-4280d57685b0',
     summary: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
     Nam sollicitudin elementum mollis. Aliquam aliquam elit vel augue viverra elementum. 
     Vivamus turpis est, euismod sed nulla sed, pulvinar finibus metus. Duis quis metus sed 
@@ -57,7 +57,7 @@ export default [
     name: 'LESS',
     id: '5',
     image: './assets/img/less.png',
-    url: 'https://open.spotify.com/artist/3qm84nBOXUEQ2vnTfUTTFC',
+    url: 'https://medium.freecodecamp.org/tor-signal-and-beyond-a-law-abiding-citizens-guide-to-privacy-1a593f2104c3',
     summary: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
      Nam sollicitudin elementum mollis. Aliquam aliquam elit vel augue viverra elementum. 
      Vivamus turpis est, euismod sed nulla sed, pulvinar finibus metus. Duis quis metus sed 
@@ -71,7 +71,7 @@ export default [
     name: 'MotionJs',
     id: '6',
     image: './assets/img/motion.png',
-    url: 'https://open.spotify.com/artist/4gzpq5DPGxSnKTe4SA8HAU',
+    url: 'http://mojs.io/',
     summary: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
      Nam sollicitudin elementum mollis. Aliquam aliquam elit vel augue viverra elementum. 
      Vivamus turpis est, euismod sed nulla sed, pulvinar finibus metus. Duis quis metus sed 
@@ -84,7 +84,7 @@ export default [
     name: 'NodeJs',
     id: '7',
     image: './assets/img/nodejs.png',
-    url: 'https://open.spotify.com/artist/1dfeR4HaWDbWqFHLkxsg1d',
+    url: 'https://codeburst.io/25-node-js-tutorials-1db3b1da0260',
     summary: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
      Nam sollicitudin elementum mollis. Aliquam aliquam elit vel augue viverra elementum. 
      Vivamus turpis est, euismod sed nulla sed, pulvinar finibus metus. Duis quis metus sed 
@@ -94,7 +94,7 @@ export default [
     name: 'React Todo',
     id: '8',
     image: './assets/img/react.png',
-    url: 'https://open.spotify.com/artist/7oPftvlwr6VrsViSDV7fJY',
+    url: 'https://medium.com/@aghh1504/1-simple-react-todo-list-52186b62976b',
     summary: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
     Nam sollicitudin elementum mollis. Aliquam aliquam elit vel augue viverra elementum. 
     Vivamus turpis est, euismod sed nulla sed, pulvinar finibus metus. Duis quis metus sed 
@@ -104,7 +104,7 @@ export default [
     name: 'VueJs',
     id: '9',
     image: './assets/img/vue.png',
-    url: 'https://open.spotify.com/artist/7Ln80lUS6He07XvHI8qqHH',
+    url: 'https://medium.mybridge.co/30-amazing-vue-js-open-source-projects-for-the-past-year-v-2018-d39a0d019bb7',
     summary: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
     Nam sollicitudin elementum mollis. Aliquam aliquam elit vel augue viverra elementum. 
     Vivamus turpis est, euismod sed nulla sed, pulvinar finibus metus. Duis quis metus sed 
@@ -117,7 +117,7 @@ export default [
     name: 'Javascript Closures',
     id: '10',
     image: './assets/img/closure.png',
-    url: 'https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2',
+    url: 'http://javascriptissexy.com/understand-javascript-closures-with-ease/',
     summary: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
     Nam sollicitudin elementum mollis. Aliquam aliquam elit vel augue viverra elementum. 
     Vivamus turpis est, euismod sed nulla sed, pulvinar finibus metus. Duis quis metus sed 
