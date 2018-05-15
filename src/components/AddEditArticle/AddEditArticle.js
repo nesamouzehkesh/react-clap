@@ -78,7 +78,7 @@ class AddEditArticle extends React.Component {
     }
 
     get isAnArticleSelected() {
-        return (Object.keys(this.props.currentArticle).length !== 0);
+        return this.props.currentArticle !== null;
     }
 
     render() {

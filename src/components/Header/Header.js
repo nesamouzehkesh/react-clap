@@ -4,18 +4,17 @@ import '../../icons.css';
 import Search from '../Search/Search';
 
 const Header = ({
-        currentArticle,
+    currentArticle,
     data,
     changeHandler,
     addHandler,
     editHandler,
     showArticle,
-    showAddForm,
-    toggle
-    }) =>
+    showAddForm
+}) =>
     (
         <div >
-            {Object.keys(currentArticle).length == 0 && !toggle ?
+            {currentArticle == null ?
                 !showAddForm ?
                     <div className="header-container">
                         <div className="fi-paw">
@@ -33,7 +32,7 @@ const Header = ({
                     </div>
 
                 :
-                !showAddForm && toggle ?
+                !showAddForm ?
                     <div className="header-container">
                         <div className="fi-paw">
                             <p>Article Id: {currentArticle.id}</p>
@@ -41,7 +40,7 @@ const Header = ({
                         <div className="fi-page-edit" onClick={() => editHandler(currentArticle)}>{` Edit`}</div>
                     </div>
                     :
-                    showAddForm && toggle ?
+                    showAddForm ?
                         <div className="fi-paw">
                             <p>Article Id: {currentArticle.id}</p>
                         </div>

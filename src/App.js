@@ -13,8 +13,7 @@ class App extends Component {
             data: [],
             term: '',
             showAddForm: false,
-            currentArticle: {},
-            toggle: false, // toggle is true for any view other than the main list/page
+            currentArticle: null,
         }
     }
 
@@ -30,7 +29,6 @@ class App extends Component {
         const theArticle = selected[0];
         this.setState({
             currentArticle: theArticle,
-            toggle: true
         })
     }
 
@@ -44,13 +42,11 @@ class App extends Component {
     renderMainList = () => {
         if (!this.state.showAddForm) {
             this.setState({
-                toggle: false,
-                currentArticle: {}
+                currentArticle: null
             })
         } else {
             this.setState({
                 showAddForm: false,
-                toggle: false,
             })
         }
     }
@@ -81,7 +77,6 @@ class App extends Component {
         this.setState({
             data: newDataArray,
             showAddForm: false,
-            toggle: true,
             currentArticle: editedArticle,
         });
     }
@@ -111,7 +106,7 @@ class App extends Component {
 
     /** some getters for more readbility */
     get articleSelectedAndNotOnMainPage() {
-        return (Object.keys(this.state.currentArticle).length !== 0 && this.state.toggle);
+        return this.state.currentArticle !== null;
     }
 
     render() {
@@ -124,7 +119,6 @@ class App extends Component {
                     showAddForm={this.state.showAddForm}
                     currentArticle={this.state.currentArticle}
                     editHandler={this.editHandler}
-                    toggle={this.state.toggle}
                 />
 
                 <div>
