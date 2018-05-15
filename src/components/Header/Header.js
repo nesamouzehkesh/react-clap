@@ -38,7 +38,7 @@ const Header = ({
                         <div className="fi-paw">
                             <p>Article Id: {currentArticle.id}</p>
                         </div>
-                        <div className="fi-page-edit" onClick={() => showAddEditFormHandler(currentArticle)}>{` Edit`}</div>
+                        <div className="fi-page-edit" onClick={showAddEditFormHandler}>{` Edit`}</div>
                     </div>
                     :
                     /** on edit page of an article */
