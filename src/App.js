@@ -17,7 +17,6 @@ class App extends Component {
         }
     }
 
-
     changeHandler = (searchTerm) => {
         this.setState({
             term: searchTerm
@@ -99,7 +98,7 @@ class App extends Component {
     }
 
     /** some getters for more readbility */
-    get articleSelectedAndNotOnMainPage() {
+    get articleSelected() {
         return this.state.currentArticle !== null;
     }
 
@@ -115,7 +114,7 @@ class App extends Component {
                 />
 
                 <div>
-                    {this.articleSelectedAndNotOnMainPage ?
+                    {this.articleSelected ?
                         this.state.showForm ?
                             <AddEditArticle
                                 renderMainList={this.renderMainList}
