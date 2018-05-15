@@ -1,4 +1,6 @@
-# Collection Search
+![paw](https://user-images.githubusercontent.com/13462129/40030947-9b0b88b8-5830-11e8-9ba2-6441fec60680.png) 
+# Collection Search!
+
 ##### An app written in `react` for keeping a collection of whatever! The app is demoed here for a collection of articles. 
 
 ## Tools:
