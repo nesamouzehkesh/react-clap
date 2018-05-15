@@ -3,6 +3,7 @@
 
 ## Tools:
 * react and react-dom
+* for the `clap` effect I used: https://codepen.io/anon/pen/odMyap A pen by: Ohan Sammanuel
 
 ## How it's been written?
 * simple conditional rendering with no routing
