@@ -82,7 +82,7 @@ class AddEditArticle extends React.Component {
     }
 
     render() {
-        const { renderMainList, showAddForm } = this.props;
+        const { renderMainList, showForm } = this.props;
 
         return (
             <form onSubmit={this.handleSubmit}>

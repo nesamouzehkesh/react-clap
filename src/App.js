@@ -12,7 +12,7 @@ class App extends Component {
         this.state = {
             data: [],
             term: '',
-            showAddForm: false,
+            showForm: false,
             currentArticle: null,
         }
     }
@@ -40,26 +40,20 @@ class App extends Component {
     }
 
     renderMainList = () => {
-        if (!this.state.showAddForm) {
+        if (!this.state.showForm) {
             this.setState({
                 currentArticle: null
             })
         } else {
             this.setState({
-                showAddForm: false,
+                showForm: false,
             })
         }
     }
 
-    addHandler = () => {
+    showAddEditFormHandler = () => {
         this.setState({
-            showAddForm: true,
-        })
-    }
-
-    editHandler = (currentArticle) => {
-        this.setState({
-            showAddForm: true,
+            showForm: true,
         })
     }
 
@@ -76,7 +70,7 @@ class App extends Component {
         const newDataArray = data.map(article => article === currentArticle ? editedArticle : article);
         this.setState({
             data: newDataArray,
-            showAddForm: false,
+            showForm: false,
             currentArticle: editedArticle,
         });
     }
@@ -115,31 +109,30 @@ class App extends Component {
                 <Header
                     data={this.state.data}
                     changeHandler={this.changeHandler}
-                    addHandler={this.addHandler}
-                    showAddForm={this.state.showAddForm}
+                    showForm={this.state.showForm}
                     currentArticle={this.state.currentArticle}
-                    editHandler={this.editHandler}
+                    showAddEditFormHandler={this.showAddEditFormHandler}
                 />
 
                 <div>
                     {this.articleSelectedAndNotOnMainPage ?
-                        this.state.showAddForm ?
+                        this.state.showForm ?
                             <AddEditArticle
                                 renderMainList={this.renderMainList}
-                                showAddForm={this.state.showAddForm}
+                                showForm={this.state.showForm}
                                 currentArticle={this.state.currentArticle}
                                 saveHandler={this.saveHandler}
                             /> :
                             <CardDetails
                                 currentArticle={this.state.currentArticle}
                                 renderMainList={this.renderMainList}
-                                showAddForm={this.state.showAddForm}
+                                showForm={this.state.showForm}
                             />
                         :
-                        this.state.showAddForm ?
+                        this.state.showForm ?
                             <AddEditArticle
                                 renderMainList={this.renderMainList}
-                                showAddForm={this.state.showAddForm}
+                                showForm={this.state.showForm}
                                 currentArticle={this.state.currentArticle}
                                 createHandler={this.createHandler}
                             /> :
